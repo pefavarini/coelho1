@@ -117,17 +117,13 @@ function setup() {
   botaorestart.size(100, 100)
   botaorestart.position(10, 600)
   botaorestart.mouseClicked(restart)
+  som5.play()
 }
 
 
 function draw() 
 {
   background(30);
-  if(som5.isPlaying()){
-    som5.stop()
-  }else{
-    som5.play()
-  }
   image(bg, 250, 350, 500, 700)
   if(keyDown("right")){
     quadrado.velocityX = 2;
@@ -213,6 +209,11 @@ function mutar(){
     som3.setVolume(volume)
     som4.setVolume(volume)
     som5.setVolume(volume)
+  }
+  if(som5.isPlaying()){
+    som5.stop()
+  }else{
+    som5.play()
   }
 }
 
